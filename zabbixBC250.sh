@@ -46,7 +46,7 @@ chmod +x /home/user/gputemp.sh
 
 #replace dummy var with wallet
 
-sed -i 's/walletaddress/c50ca78fa5095615f64e6a310f9a33adada4e6e32f68ae12/g' /home/user/customminer.sh
+sed -i 's/walletaddress/YOURREALWALLETADDRESS/g' /home/user/customminer.sh
 sed -i 's/nodeipaddressvar/192.168.254.21/g' /home/user/customminer.sh
 sed -i 's/nodeipport/3000/g' /home/user/customminer.sh
 
