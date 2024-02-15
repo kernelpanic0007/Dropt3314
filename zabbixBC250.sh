@@ -31,11 +31,11 @@ apt -y install zabbix-agent
 
 
 #download necessary scripts
-wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/amd-oc.conf -O /hive-config/amd-oc.conf
-wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/zabbix_agentd.conf -O /etc/zabbix/zabbix_agentd.conf
-wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/customminer.sh -O /home/user/customminer.sh
-wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/gpuTemp.sh -O /home/user/gputemp.sh 
-wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/rig.conf -O /hive-config/rig.conf
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/amd-oc.conf -O /hive-config/amd-oc.conf
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/zabbix_agentd.conf -O /etc/zabbix/zabbix_agentd.conf
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/customminer.sh -O /home/user/customminer.sh
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/gpuTemp.sh -O /home/user/gputemp.sh 
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/rig.conf -O /hive-config/rig.conf
 #start zabbix
 systemctl start zabbix-agent 
 systemctl enable zabbix-agent 
