@@ -32,8 +32,8 @@ apt -y install zabbix-agent
 
 #download necessary scripts
 wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/amd-oc.conf -O /hive-config/amd-oc.conf
-wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/zabbix_agentd.conf -O /etc/zabbix/zabbix_agentd.conf
-wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/customminer.sh -O /home/user/customminer.sh
+wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/zabbix_agentdbeta.conf -O /etc/zabbix/zabbix_agentd.conf
+wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/customminerbeta.sh -O /home/user/customminer.sh
 wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/rig.conf -O /hive-config/rig.conf
 #start zabbix
 systemctl start zabbix-agent 
@@ -44,9 +44,9 @@ chmod +x /home/user/customminer.sh
 
 #replace dummy var with wallet
 
-sed -i 's/walletaddress/TYPEINYOURWALLETHERE/g' /home/user/customminer.sh
-sed -i 's/nodeipaddressvar/TYPEINYOURNODEIP/g' /home/user/customminer.sh
-sed -i 's/nodeipport/TYPEINYOURNODEPORT/g' /home/user/customminer.sh
+sed -i 's/walletaddress/TYPEINYOURWALLETHERE/g' /home/user/customminerbeta.sh
+sed -i 's/nodeipaddressvar/TYPEINYOURNODEIP/g' /home/user/customminerbeta.sh
+sed -i 's/nodeipport/TYPEINYOURNODEPORT/g' /home/user/customminerbeta.sh
 
 #replace zabbix HostName with systems
 sed -i 's/zabbixipaddressvar/TYPEINYOURZABBIXSERVERIP/g' /etc/zabbix/zabbix_agentd.conf
