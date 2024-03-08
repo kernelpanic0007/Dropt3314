@@ -33,7 +33,7 @@ apt -y install zabbix-agent
 #download necessary scripts
 wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/amd-oc.conf -O /hive-config/amd-oc.conf
 wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/zabbix_agentdbeta.conf -O /etc/zabbix/zabbix_agentd.conf
-wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/customminerbeta.sh -O /home/user/customminer.sh
+wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/customminerbeta.sh -O /home/user/customminerbeta.sh
 wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/rig.conf -O /hive-config/rig.conf
 #start zabbix
 systemctl start zabbix-agent 
