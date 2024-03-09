@@ -31,10 +31,10 @@ apt -y install zabbix-agent
 
 
 #download necessary scripts
-wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/amd-oc.conf -O /hive-config/amd-oc.conf
-wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/zabbix_agentdbeta.conf -O /etc/zabbix/zabbix_agentd.conf
-wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/customminerbeta.sh -O /home/user/customminerbeta.sh
-wget https://raw.githubusercontent.com/kernelpanic0007/dnar/main/rig.conf -O /hive-config/rig.conf
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/amd-oc.conf -O /hive-config/amd-oc.conf
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/zabbix_agentdbeta.conf -O /etc/zabbix/zabbix_agentd.conf
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/customminerbeta.sh -O /home/user/customminerbeta.sh
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/rig.conf -O /hive-config/rig.conf
 #start zabbix
 systemctl start zabbix-agent 
 systemctl enable zabbix-agent 
@@ -61,7 +61,11 @@ fi
 #add customminer to rc.local for auto startup
 #for Ubuntu 20.04 create customminer.sh as service
 #sed -i -e '$i \/home/user/customminer.sh\n' /etc/rc.local
- 
+
+wget https://raw.githubusercontent.com/kernelpanic0007/Dropt3314/main/customminerbeta.service -O /etc/systemd/system/customminerbeta.service
+systemctl enable customminerbeta.service
+systemctl start customminerbeta.service
+
 #restart zabbix agent
 
 systemctl restart zabbix-agent
