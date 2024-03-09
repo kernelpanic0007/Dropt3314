@@ -1,9 +1,11 @@
 [Unit]
-Description=Start customminer
+Description=Start customminer beta
 After=network.target
 
 [Service]
-ExecStart=/home/user/customminerbeta.sh
+WorkingDirectory=/home/user
+ExecStart=/bin/bash /home/user/customminerbeta.sh
+KillMode=process
 Restart=on-failure
 RestartSec=5
 
