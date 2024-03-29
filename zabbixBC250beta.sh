@@ -40,7 +40,7 @@ systemctl start zabbix-agent
 systemctl enable zabbix-agent 
 
 #make scripts executable
-chmod +x /home/user/customminer.sh
+chmod +x /home/user/customminerbeta.sh
 
 #replace dummy var with wallet
 
